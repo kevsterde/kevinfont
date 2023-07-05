@@ -1,0 +1,11 @@
+.wrapper{
+  @apply container mx-auto;
+}
+
+.spacer{
+  @apply py-10 lg:py-0 px-5;
+}
+
+
+*{ outline: 1px dashed red;}
+
