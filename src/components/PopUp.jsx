@@ -2,32 +2,10 @@ import React, { useState } from 'react'
 
 function PopUp(props) {
 
-  const [fValue,setFValue] = useState({
-    fName: '',
-    fImport: '',
-    fFamily:'',
-    fPassword:''
-  })
-
-  const handleChange = e =>{  
-    const name = e.target.name
-    const value = e.target.value
-
-    setFValue({
-      ... fValue,[name] : value
-    })
-
-  }
+  
 
 
-  const handleSubmit = e =>{
-    e.preventDefault()
-    console.log(fValue)
-  }
-
-
-
-
+ 
 
   return (
     <div id='popup' className='fixed inset-0  flex justify-center items-center'>
@@ -39,27 +17,31 @@ function PopUp(props) {
         
         <form 
         method='post'
-        onSubmit={handleSubmit}
+        onSubmit={       
+          props.handlerAdd
+          
+        
+        }
         className='flex flex-col gap-5 p-5 bg-color4  rounded-2xl  relative'
         >
-            <input type='text' name='fName' placeholder='Font Name*'
-            value={fValue.fName}
-            onChange={handleChange}
+            <input autoComplete="off" type='text' name='Title' placeholder='Font Name*'
+            value={props.fValue.Title}
+            onChange={props.handleChange}
             className='rounded-xl p-3'
             />
-            <textarea type='text' name='fImport' rows="4" placeholder='Import Css*' 
-            value={fValue.fImport}
-            onChange={handleChange}
+            <textarea type='text' name='Import' rows="4" placeholder='Import Css*' 
+            value={props.fValue.Import}
+            onChange={props.handleChange}
              className='rounded-xl p-3 h-auto resize-none'
             ></textarea>
-            <input type='text' name='fFamily' placeholder='Font Family*'
-             value={fValue.fFamily}
-             onChange={handleChange}
+            <input autoComplete="off" type='text' name='FontFamily' placeholder='Font Family*'
+             value={props.fValue.FontFamily}
+             onChange={props.handleChange}
              className='rounded-xl p-3'
             />
-            <input type='text' name='fPassword' placeholder='Password*'
-            value={fValue.fPassword}
-            onChange={handleChange}
+            <input autoComplete="off" type='text' name='fPassword' placeholder='Password*'
+            value={props.password}
+            onChange={props.hcPass}
              className='rounded-xl p-3' 
             />
 

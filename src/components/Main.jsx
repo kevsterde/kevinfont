@@ -1,13 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import FontContainer from './FontContainer'
+import { getDocs } from 'firebase/firestore'
 
-function Main() {
+function Main(props) {
 
-    const [search, setSearch] = useState()
+    const [search, setSearch] = useState(true)
+    
+   
+
 
     const changeSearch = e =>{
         setSearch(e.value)
     }
+
+
+    useEffect(()=>{
+       const getCollection = async () =>{
+            const data = await getDocs(props.fontRef)
+            props.setFonts(data.docs.map((docs)=>({
+                ... docs.data(),id:docs.id
+            })))
+            
+        }
+
+       getCollection()
+
+     
+        console.log("render");
+
+    },[])
 
     return (
         <div id='main_area' className='spacer bg-color3 text-white'>
@@ -22,15 +43,18 @@ function Main() {
                     onChange={changeSearch}
                     /> 
                     
-                    <button className='h-10 ml-5 bg-color1 text-white font-semibold px-10 rounded-[150px] hover:bg-color2'>Search</button>
+                    <button className='h-10 ml-5 bg-color1 text-white font-semibold px-10 rounded-[150px] hover:bg-color2'
+                    
+                    
+                    >Search</button>
                 </form>
 
                 <main className='flex  flex-wrap   gap-10 justify-center '>
-                    <FontContainer name="Ubuntu"/>
-                    <FontContainer name="Roboto"/>
-                    <FontContainer name="Open Sans"/>
-                    <FontContainer name="Poppins"/>
-                    <FontContainer name="Lato"/>
+                    {
+                        props.fonts && props.fonts.map((font,index) => {
+                            return <FontContainer handleSelcted={props.handleSelcted} font={font} key={index}  />
+                        })
+                    }
 
                 </main>
                 </div>
