@@ -53,6 +53,8 @@ function App() {
     if(fValue.Title && fValue.Import && fValue.FontFamily ){
       if(password == "proweaver")
       {
+
+        
         alert("Added Sucessfully")
         await addDoc(fontRef,fValue)
 

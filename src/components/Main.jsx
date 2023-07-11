@@ -4,13 +4,13 @@ import { getDocs } from 'firebase/firestore'
 
 function Main(props) {
 
-    const [search, setSearch] = useState(true)
+    const [search, setSearch] = useState('')
     
    
 
 
     const changeSearch = e =>{
-        setSearch(e.value)
+        setSearch(e.target.value)
     }
 
 
@@ -51,9 +51,18 @@ function Main(props) {
 
                 <main className='flex  flex-wrap   gap-10 justify-center '>
                     {
-                        props.fonts && props.fonts.map((font,index) => {
+                        props.fonts && props.fonts
+                        .filter((font) =>{
+                            return search.toLowerCase() === ''
+                            ? font
+                            : font.Title.toLowerCase().includes(search.toLowerCase())
+                        })
+                        .map((font,index) => {
                             return <FontContainer handleSelcted={props.handleSelcted} font={font} key={index}  />
                         })
+                    }
+                    {
+                        props.fonts.length == 0 && <h1 className='text-6xl animate-ping'>Loading...</h1>
                     }
 
                 </main>
