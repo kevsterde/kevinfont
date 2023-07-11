@@ -43,10 +43,6 @@ function Main(props) {
                     onChange={changeSearch}
                     /> 
                     
-                    <button className='h-10 ml-5 bg-color1 text-white font-semibold px-10 rounded-[150px] hover:bg-color2'
-                    
-                    
-                    >Search</button>
                 </form>
 
                 <main className='flex  flex-wrap   gap-10 justify-center '>
