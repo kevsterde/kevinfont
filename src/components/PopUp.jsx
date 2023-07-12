@@ -24,17 +24,17 @@ function PopUp(props) {
         }
         className='flex flex-col gap-5 p-5 bg-color4  rounded-2xl  relative'
         >
-            <input autoComplete="off" type='text' name='Title' placeholder='Font Name*'
+            <input autoComplete="off" type='text' name='Title' placeholder='Poppins'
             value={props.fValue.Title}
             onChange={props.handleChange}
             className='rounded-xl p-3'
             />
-            <textarea type='text' name='Import' rows="4" placeholder='Import Css*' 
+            <textarea type='text' name='Import' rows="4" placeholder='@import url css' 
             value={props.fValue.Import}
             onChange={props.handleChange}
              className='rounded-xl p-3 h-auto resize-none'
             ></textarea>
-            <input autoComplete="off" type='text' name='FontFamily' placeholder='Font Family*'
+            <input autoComplete="off" type='text' name='FontFamily' placeholder="'Poppins', sans-serif;"
              value={props.fValue.FontFamily}
              onChange={props.handleChange}
              className='rounded-xl p-3'
