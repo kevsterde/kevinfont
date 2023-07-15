@@ -1,13 +1,15 @@
+<div align="center">
+  <img src="https://github.com/kevsterde/kevinfont/assets/96121161/abe2f178-7140-4aa3-b8c8-3623fa083d11" alt="react"  width="100" height="100"/>
 
-![icon](https://github.com/kevsterde/kevinfont/assets/96121161/abe2f178-7140-4aa3-b8c8-3623fa083d11)
-# FONT 
-Storage for fonts used
+# KWR Font <br/>
+The Ultimate Font Storage with Copy & Paste - Effortlessly Access and Utilize Fonts Anywhere!
+<br/>
+Website URL: <a href="https://kevsterde.great-site.net/kwrfont/" target="_blank" rel="noreferrer">https://kevsterde.great-site.net/kwrfont/  </a> 
+<br/><br/>
+<h1 align="center">TECHNOLOGIES USED </h1>
 
-Website: https://statuesque-bubblegum-79c325.netlify.app/
 
-Excel Format: https://docs.google.com/spreadsheets/d/1fRuBFHTj-gTGSA-_FQYYTjN07UnaHNS0jUpdY0qj-vw/edit#gid=0
-
-<h1>TECHNOLOGIES USED </h1>
-<img height="40px" width="40px" src="https://github.com/kevsterde/react-noteapp/assets/96121161/9805983a-7101-43cf-8064-f505298af1c3"/>
-<img height="40px" width="40px" src="https://github.com/kevsterde/react-noteapp/assets/96121161/e366a939-cd88-44d3-8b75-fed1e130cf1c"/>
+<a href="https://react.dev/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react"  width="40" height="40"/> </a> 
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40"  height="40"/> </a> 
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> 
+</div>
